@@ -1,6 +1,6 @@
 async function getWeather() {
     const location = document.getElementById('location').value;
-    const API_KEY = process.env.API_KEY; // Replace with your API key
+    const API_KEY = import.meta.env.VITE_API_KEY; // Access the API key from environment variables
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`;
   
     try {
